@@ -12,6 +12,7 @@ public class Task1 {
         boolean done = false;
         String trash;
 
+        //Loop
         do {
 
             System.out.println("Enter the cost of the item");
@@ -38,6 +39,7 @@ public class Task1 {
 
         }
 
+        //Math
         else {
 
             shipCost = itemCost * SHIPFEE;
