@@ -18,7 +18,7 @@ public class Task2 {
 
                 userMonth = in.nextInt();
 
-                if (userMonth >= 0 && userMonth <= 12) {
+                if (userMonth >= 1 && userMonth <= 12) {
 
                     done = true;
 
