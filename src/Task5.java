@@ -13,52 +13,15 @@ public class Task5 {
         boolean done = false;
         String trash = " ";
 
-        //Loop
+        //Loop to collect width
         do {
-
-            //Collect width
 
             System.out.println("What is the width?");
 
             if (in.hasNextDouble()) {
 
                 width = in.nextDouble();
-
-                //Collect height
-
-                System.out.println("What is the height?");
-
-                if (in.hasNextDouble()) {
-
-                    height = in.nextDouble();
-
-                    //Collect the cost of materials
-
-                    System.out.println("What is the cost per square foot of materials?");
-
-                    if (in.hasNextDouble()) {
-
-                        materialCost = in.nextDouble();
-
-                        done = true;
-
-                    }
-
-                    else {
-
-                        trash = in.nextLine();
-                        System.out.println("The cost must be a number, you said: " + trash);
-
-                    }
-
-                }
-
-                else {
-
-                    trash = in.nextLine();
-                    System.out.println("The height must be a number, you said: " + trash);
-
-                }
+                done = true;
 
             }
 
@@ -66,6 +29,50 @@ public class Task5 {
 
                 trash = in.nextLine();
                 System.out.println("The width must be a number, you said: " + trash);
+
+            }
+
+        } while (!done);
+
+        done = false;
+
+        do {
+
+            System.out.println("What is the height?");
+
+            if (in.hasNextDouble()) {
+
+                height = in.nextDouble();
+                done = true;
+
+            }
+
+            else {
+
+                trash = in.nextLine();
+                System.out.println("The height must be a number, you said: " + trash);
+
+            }
+
+        } while (!done);
+
+        done = true;
+
+        do {
+
+            System.out.println("What is the cost per square foot?");
+
+            if (in.hasNextDouble()) {
+
+                materialCost = in.nextDouble();
+                done = true;
+
+            }
+
+            else {
+
+                trash = in.nextLine();
+                System.out.println("The cost must be a number, you said: " + trash);
 
             }
 
